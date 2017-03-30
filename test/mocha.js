@@ -125,6 +125,16 @@ describe('gulp-angular-resolve-relative-template-urls', function () {
         });
     });
 
+    it('should ignore absolute templateUrls', function (done) {
+        var fakeFile = buildFakeFile('templateUrl: \'/template.html\'');
+        sut.write(fakeFile);
+        sut.once('data', function (file) {
+            assert.equal(file.contents.toString('utf8'), 'templateUrl: \'/template.html\'');
+            done();
+        });
+    });
+
+
     // TODO: Reimplement
     xit('should skip errors if particular flag specified', function (done) {
         testResolveRelativeTemplates('skip-errors', done, { skipErrors: true });
