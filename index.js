@@ -15,7 +15,7 @@ module.exports = function (options) {
     if (options.basePath == null) {
         throw new PluginError(PLUGIN_NAME, 'options.basePath must be specified. Otherwise the plugin cannot resolve an absolute path to the templates');
     }
-
+    options.transformUrl = options.transformUrl || function (templateUrl) { return templateUrl; };
     options.basePath = pathModule.resolve(options.basePath);
     options.processors = [new Angular1Processor()];
 

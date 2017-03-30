@@ -134,6 +134,16 @@ describe('gulp-angular-resolve-relative-template-urls', function () {
         });
     });
 
+    it('should allow transforming resolved absolute url via the transformUrl property', function (done) {
+        sut = resolveRelativeTemplates({ basePath: testDir + '/cases/', debug: true, transformUrl: function (url) { return 'UPDATEDPATH'; } });
+        var fakeFile = buildFakeFile('templateUrl: \'template.html\'');
+        sut.write(fakeFile);
+        sut.once('data', function (file) {
+            assert.equal(file.contents.toString('utf8'), 'templateUrl:\'UPDATEDPATH\'');
+            done();
+        });
+    });
+
 
     // TODO: Reimplement
     xit('should skip errors if particular flag specified', function (done) {

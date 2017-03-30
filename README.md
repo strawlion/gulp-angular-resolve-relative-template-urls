@@ -69,10 +69,13 @@ angular.module('test').directive('helloWorld', function () {
 
 ## API
 
-### embedTemplates(options)
+### resolveRelativeTemplateUrls(options)
 
 #### options.basePath
 Type: `String`. The path against which the absolute path to the templates are resolved. Normally this is the path to the base folder from which your html files are served.
+
+#### options.transformUrl
+Type: `Function`. Allows transforming the resolved absolute url. Useful for cases where files are written to a directory structure that is different from their source location. Example: `function(templateUrl) { return '/static/' + templateUrl; }`
 
 #### options.skipFiles
 Type: `RegExp` or `Function`. By default: do not skip any files. RegExp can test file name to skip template embedding, but this file will still be passed through the general gulp pipe and be visible for all of the following plugins. Example: `function(file) {return file.path.endsWith('-skip-directive.js');}`
