@@ -1,0 +1,50 @@
+{
+  "name": "gulp-angular-resolve-relative-template-urls",
+  "version": "0.0.0",
+  "description": "gulp plugin to convert relative paths to absolute paths in angular directives and components",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/strawlion/gulp-angular-resolve-relative-template-urls.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "plugin",
+    "angular",
+    "absolute",
+    "relative",
+    "path",
+    "paths",
+    "directive",
+    "templates"
+  ],
+  "author": "Adam Wilson <adam.arthur.wilson@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strawlion/gulp-angular-resolve-relative-template-urls/issues"
+  },
+  "homepage": "https://github.com/strawlion/gulp-angular-resolve-relative-template-urls",
+  "dependencies": {
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.1",
+    "htmlparser2": "~3.9.1",
+    "object-assign": "4.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2",
+    "chai": "^3.5.0",
+    "chai-string": "^1.2.0"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "index.js",
+    "lib"
+  ],
+  "directories": {}
+}
