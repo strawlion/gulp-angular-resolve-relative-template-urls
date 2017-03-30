@@ -1,6 +1,6 @@
 {
   "name": "gulp-angular-resolve-relative-template-urls",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "gulp plugin to convert relative paths to absolute paths in angular directives and components",
   "main": "index.js",
   "scripts": {
